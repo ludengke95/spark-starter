@@ -1,0 +1,6 @@
+spring:
+  spark:
+    other:
+      'spark.sql.crossJoin.enabled': true
+      'spark.executor.memory': 1G
+      'spark.dynamicAllocation.minExecutors': 3

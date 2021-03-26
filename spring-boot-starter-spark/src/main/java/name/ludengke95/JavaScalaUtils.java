@@ -1,4 +1,4 @@
-package org.ludengke95;
+package name.ludengke95;
 
 import scala.Tuple2;
 import scala.collection.Seq;

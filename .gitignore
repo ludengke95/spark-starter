@@ -1,6 +1,5 @@
 # Project exclude paths
-/spark-starter-example/target/
-/spring-boot-starter-spark/target/
+/**/target/
 /.idea
 /*.iml
 /**/*.iml

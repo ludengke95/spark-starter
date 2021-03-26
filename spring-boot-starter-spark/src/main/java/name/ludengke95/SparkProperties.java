@@ -1,4 +1,4 @@
-package org.ludengke95;
+package name.ludengke95;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

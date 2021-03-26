@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  name.ludengke95.SparkAutoConfiguration
+  name.ludengke95.SparkStreamingKafkaAutoConfiguration

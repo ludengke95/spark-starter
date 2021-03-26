@@ -1,4 +1,4 @@
-package org.ludengke95;
+package name.ludengke95;
 
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;

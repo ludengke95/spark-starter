@@ -4,18 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.ludengke95</groupId>
+    <groupId>name.ludengke95</groupId>
     <artifactId>spark-starter</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>spark-starter-example</module>
         <module>spring-boot-starter-spark</module>
+        <module>spring-boot-starter-spark-streaming-kafka</module>
+        <module>spring-boot-starter-spark-streaming</module>
+        <module>spark-streaming-starter-example</module>
     </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <scala.version>2.12</scala.version>
+        <spark.version>2.4.7</spark.version>
     </properties>
 
     <parent>

@@ -1,4 +1,4 @@
-package org.ludengke95;
+package name.ludengke95;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.sql.SparkSession;
@@ -11,12 +11,17 @@ import org.springframework.context.annotation.Configuration;
 public class SparkAutoConfiguration {
 
     @Bean
-    public SparkSession createSparkSession(SparkProperties sparkProperties){
+    public SparkConf createSparkConf(SparkProperties sparkProperties){
         SparkConf conf = new SparkConf();
         conf.setAppName(sparkProperties.getAppName());
         conf.setMaster(sparkProperties.getMaster());
         //使用conf::set设置conf，取代java容器到scala容器的转化
         sparkProperties.getOther().forEach(conf::set);
+        return conf;
+    }
+
+    @Bean
+    public SparkSession createSparkSession(SparkConf conf){
         SparkSession session = SparkSession.builder().config(conf).getOrCreate();
         return session;
     }

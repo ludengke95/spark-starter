@@ -12,7 +12,7 @@ import javax.annotation.PostConstruct;
  * @author ldk
  */
 @Component
-@ConfigurationProperties(prefix = "spring.spark.streaming")
+@ConfigurationProperties(prefix = "spring.spark-streaming")
 public class SparkStreamingProperties {
     private final static Duration DEFAULT_DURATION = Durations.seconds(10);
 

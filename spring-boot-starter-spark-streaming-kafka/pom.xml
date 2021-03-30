@@ -46,7 +46,7 @@
         </dependency>
         <dependency>
             <groupId>name.ludengke95</groupId>
-            <artifactId>spring-boot-starter-spark</artifactId>
+            <artifactId>spring-boot-starter-spark-streaming</artifactId>
             <version>${parent.version}</version>
         </dependency>
     </dependencies>

@@ -23,7 +23,6 @@ public class SparkStarterExample implements CommandLineRunner {
         Dataset<Row> in = sparkSession.read().option("header", "true").csv("./spark-starter-example/1.in");
         in.createOrReplaceTempView("in_data");
         sparkSession.sql("select name,date,sum(num) as num from in_data group by name,date").createOrReplaceTempView("tmp");
-        sparkSession.sql("select name,date,sum(num) over(partition by name) from tmp").show(20);
-        Thread.sleep(10000000);
+        sparkSession.sql("select name,date,sum(num) over(partition by name) from tmp").show();
     }
 }

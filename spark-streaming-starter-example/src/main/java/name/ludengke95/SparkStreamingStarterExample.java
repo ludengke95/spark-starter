@@ -27,7 +27,7 @@ public class SparkStreamingStarterExample implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         JavaReceiverInputDStream<String> stringJavaReceiverInputDStream = context.socketTextStream("127.0.0.1", 3333);
         JavaPairDStream<String, Integer> result = stringJavaReceiverInputDStream
                 .flatMap(s -> Arrays.asList(s.split(" ")).iterator())
@@ -38,7 +38,5 @@ public class SparkStreamingStarterExample implements CommandLineRunner {
                 })
                 .reduceByKey((x, y) -> x + y);
         result.print();
-//        context.start();
-//        context.awaitTermination();
     }
 }
